@@ -1,0 +1,62 @@
+<<<<<<< Original
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="activity.ctec.aboutme" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".AboutMeActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SportsActivity"
+            android:label="@string/title_activity_sports" >
+        </activity>
+        <activity
+            android:name=".VideoGamesActivity"
+            android:label="@string/title_activity_video_games" >
+        </activity>
+        <activity
+            android:name=".CookingActivity"
+            android:label="@string/title_activity_cooking" >
+        </activity>
+        <activity
+            android:name=".MusicActivity"
+            android:label="@string/title_activity_music"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".PhotographyEditingActivity"
+            android:label="@string/title_activity_photography_editing"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".MusicActivity"
+            android:label="@string/title_activity_main"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+    </application>
+
+</manifest>
+
+=======
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <application>
+        <activity android:name="activity.ctec.aboutme.PhotographyEditingActivity"
+                    android:label="@string/title_activity_photography_editing"
+                android:theme="@style/AppTheme.NoActionBar"
+>
+        </activity>
+    </application>
+</manifest>
+>>>>>>> Added
