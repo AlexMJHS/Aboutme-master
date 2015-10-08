@@ -6,7 +6,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.view.View;
-
+import android.content.Intent;
 
 public class CookingActivity extends AppCompatActivity
 {
@@ -40,7 +40,8 @@ public class CookingActivity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_settings)
+        {
             return true;
         }
 
@@ -51,8 +52,11 @@ public class CookingActivity extends AppCompatActivity
     {
         nextButton.setOnClickListener(new View.OnClickListener()
         {
-            public void onclick(View buttonView)
+            public void onClick(View buttonView)
             {
+                Intent returnIntent = new Intent();
+                setResult(RESULT_OK, returnIntent);
+                finish();
 
             }
 

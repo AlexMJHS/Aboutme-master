@@ -20,7 +20,7 @@ public class VideoGamesActivity extends AppCompatActivity
 
         nextButton = (Button) findViewById(R.id.NextButton);
 
-        setupListeners;
+        setupListeners();
     }
 
     @Override
