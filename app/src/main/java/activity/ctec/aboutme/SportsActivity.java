@@ -6,10 +6,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.view.View;
+import android.content.Intent;
 
 public class SportsActivity extends AppCompatActivity
 {
-    private homeButton;
+    private Button nextButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -17,7 +18,7 @@ public class SportsActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sports);
 
-        homeButton = (Button) findViewById(R.id.returnHomeButton);
+        nextButton = (Button) findViewById(R.id.NextButton);
 
         setupListeners();
     }
@@ -47,10 +48,13 @@ public class SportsActivity extends AppCompatActivity
 
     private void setupListeners()
     {
-        homeButton.setOnClickListener(new View.OnClickListener()
+        nextButton.setOnClickListener(new View.OnClickListener()
         {
             public void onClick(View buttonView)
             {
+                Intent returnIntent = new Intent();
+                setResult(RESULT_OK, returnIntent);
+                finish();
 
             }
         });

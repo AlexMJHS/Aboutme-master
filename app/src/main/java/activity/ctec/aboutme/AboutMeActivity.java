@@ -5,11 +5,14 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.view.View;
+import android.content.Intent;
+
 
 public class AboutMeActivity extends AppCompatActivity
 {
-    private Button aboutMeButton;
-    private Button swapButton;
+    private Button AboutMeButton;
+    private Button nextButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -17,7 +20,10 @@ public class AboutMeActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about_me);
 
-        aboutMeButton = (Button) findViewById(R.id.AboutMeView);
+
+        AboutMeButton = (Button) findViewById(R.id.AboutMeView);
+        nextButton = (Button) findViewById(R.id.swapScreenButton);
+        setupListeners();
     }
 
     @Override
@@ -43,5 +49,17 @@ public class AboutMeActivity extends AppCompatActivity
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    private void setupListeners()
+    {
+        AboutMeButton.setOnClickListener(new View.OnClickListener()
+        {
+            public void onClick(View buttonView)
+            {
+                Intent changeScreen = new Intent(buttonView.getContext(), SportsActivity.class);
+                startActivityForResult(changeScreen, 0);
+            }
+        }
     }
 }
